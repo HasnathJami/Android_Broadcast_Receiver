@@ -26,10 +26,12 @@ public class NetworkUtil {
         if (Settings.System.getInt(context.getContentResolver(), Settings.Global.WIFI_ON, 0) == 1) {
             status = "Wifi enabled";
             return status;
-        } else if (Settings.System.getInt(context.getContentResolver(), Settings.Global.WIFI_ON, 0) == 0) {
-            status = "Wifi disabled";
-            return status;
-        } else if (Settings.System.getInt(context.getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 0) == 1) {
+        }
+//        else if (Settings.System.getInt(context.getContentResolver(), Settings.Global.WIFI_ON, 0) == 0) {
+//            status = "Wifi disabled";
+//            return status;
+//        }
+        else if (Settings.System.getInt(context.getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 0) == 1) {
             status = "AirPlane enabled";
             return status;
         } else if (Settings.System.getInt(context.getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 0) == 0) {

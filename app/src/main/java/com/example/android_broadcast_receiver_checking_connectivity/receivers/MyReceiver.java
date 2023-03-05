@@ -1,4 +1,4 @@
-package com.example.android_broadcast_receiver_checking_connectivity;
+package com.example.android_broadcast_receiver_checking_connectivity.receivers;
 
 
 import android.app.Activity;
@@ -6,15 +6,19 @@ import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android_broadcast_receiver_checking_connectivity.MainActivity;
+import com.example.android_broadcast_receiver_checking_connectivity.R;
 import com.example.android_broadcast_receiver_checking_connectivity.utils.NetworkUtil;
 
 public class MyReceiver extends BroadcastReceiver {
     Dialog dialog;
     TextView nettext;
+    MediaPlayer mp;
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -36,5 +40,6 @@ public class MyReceiver extends BroadcastReceiver {
             dialog.show();
         }
         Toast.makeText(context, status, Toast.LENGTH_LONG).show();
+
     }
 }
